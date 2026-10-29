@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  /* Food website theme */
+  --color-brand: #ea580c;
+  --color-brand-dark: #c2410c;
+  --color-brand-light: #fb923c;
+  --color-gold: #f59e0b;
+  --color-gold-dark: #d97706;
+  --color-cream: #fff7ed;
+  --color-ink: #1f2937;
+
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: #ffffff;
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tailwind ke saath MUI clash na kare */
+* {
+  box-sizing: border-box;
+}
+
+/* Buttons par hand cursor (native default arrow hota hai) */
+button,
+[role='button'],
+a[href] {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled='true'] {
+  cursor: not-allowed;
+}
